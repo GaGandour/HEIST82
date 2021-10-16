@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Cutscene : MonoBehaviour
 {
@@ -48,6 +49,10 @@ public class Cutscene : MonoBehaviour
             imagemAtual = Instantiate(imagem5, posicao, Quaternion.identity);
             imagemAtual.transform.localScale = new Vector3(237,237,1);
             numero++;
+        }
+        if (Time.time > 5 && numero == 5) {
+            Destroy(imagemAtual);
+            SceneManager.LoadScene("Cutscene 2");
         }
     }
 }
