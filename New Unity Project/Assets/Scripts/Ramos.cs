@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Ramos : MonoBehaviour {
-    Fala historia = new Fala(
+    public Fala historia = new Fala(
         "01",
         Status.Nulo,
         new List<string> {"Certo dia, eu estava me sentindo muito GANANCIOSO, então saí para roubar. Nesse dia, eu tinha uma..."},
