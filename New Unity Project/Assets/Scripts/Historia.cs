@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Historia : MonoBehaviour
 {
+    public GameObject caixaDeTexto;
     private Ramos arvore;
     private Fala falaAtual;
     private int escolha;
@@ -13,6 +14,40 @@ public class Historia : MonoBehaviour
         escolha = -1;
         arvore = gameObject.GetComponent<Ramos>() as Ramos;
         falaAtual = arvore.historia;
+        caixaDeTexto.GetComponent<textBoxArvore>().sentences = falaAtual.falas.ToArray();
+        
+    }
+    private void Update() {
+        if (Input.GetKeyDown("space") && !caixaDeTexto.GetComponent<textBoxArvore>().isTyping)
+        {
+            Falar();
+        }
+    }
+    public void Escolher (int i) {
+        escolha = i;
+        //sumir os botao
+        IrParaOProximo();
+    }
+    public void Falar () {
+        if (caixaDeTexto.GetComponent<textBoxArvore>().index == falaAtual.falas.ToArray().Length)
+        {
+            caixaDeTexto.GetComponent<textBoxArvore>().closeBox();
+            if (falaAtual.proximo == Proximo.Probabilistico || falaAtual.proximo == Proximo.NDA)
+            {
+                IrParaOProximo();
+            }
+            else if (falaAtual.proximo == Proximo.Escolha)
+            {
+                // aparecer os botoes
+            }
+        }
+        else if (caixaDeTexto.GetComponent<textBoxArvore>().index == 0) 
+        {
+            caixaDeTexto.GetComponent<textBoxArvore>().openBox();
+            caixaDeTexto.GetComponent<textBoxArvore>().enterDialogue();
+        }
+        else if (caixaDeTexto.GetComponent<textBoxArvore>().index < falaAtual.falas.ToArray().Length)
+            caixaDeTexto.GetComponent<textBoxArvore>().nextSentence();
     }
     public void IrParaOProximo () {
         switch (falaAtual.status)
@@ -49,5 +84,7 @@ public class Historia : MonoBehaviour
                 falaAtual = falaAtual.listaDeRamos[escolha];
                 break;
         }
+        caixaDeTexto.GetComponent<textBoxArvore>().index = 0;
+        escolha = -1;
     }
 }

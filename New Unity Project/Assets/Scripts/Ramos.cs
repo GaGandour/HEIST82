@@ -67,7 +67,7 @@ public class Ramos {
                                                 new List<string> {
                                                     "Percebi que era a minha namorada e descubri que estava sendo traído!"
                                                 },
-                                                Proximo.Escolha,
+                                                Proximo.NDA,
                                                 new List<int> {},
                                                 new List<string> {},
                                                 new List<Fala> {}
@@ -79,7 +79,7 @@ public class Ramos {
                                                     "Vi que quem estava falando era a avó dele!",
                                                     "Ela me achou muito querido, então fez um pix para mim."
                                                 },
-                                                Proximo.Escolha,
+                                                Proximo.NDA,
                                                 new List<int> {},
                                                 new List<string> {},
                                                 new List<Fala> {}
@@ -91,7 +91,7 @@ public class Ramos {
                                                     "Eu ouvi um demônio que dizia:",
                                                     "vOCê tEm SetE DIaS"
                                                 },
-                                                Proximo.Escolha,
+                                                Proximo.NDA,
                                                 new List<int> {},
                                                 new List<string> {},
                                                 new List<Fala> {}
@@ -114,7 +114,7 @@ public class Ramos {
                                                 new List<string> {
                                                     "Mas ele era um policial e me deu um tiro na mesma hora!"
                                                 },
-                                                Proximo.Escolha,
+                                                Proximo.NDA,
                                                 new List<int> {},
                                                 new List<string> {},
                                                 new List<Fala> {}
@@ -125,7 +125,7 @@ public class Ramos {
                                                 new List<string> {
                                                     "Ele se intimidou com a AK-47, me deu tudo e saiu correndo!"
                                                 },
-                                                Proximo.Escolha,
+                                                Proximo.NDA,
                                                 new List<int> {},
                                                 new List<string> {},
                                                 new List<Fala> {}
@@ -165,7 +165,7 @@ public class Ramos {
                                                     "Só que ele também era um ladrão! Ele se aproveitou de que eu estava vulnerável...",
                                                     "E roubou meu celular E minha carteira!"
                                                 },
-                                                Proximo.Escolha,
+                                                Proximo.NDA,
                                                 new List<int> {},
                                                 new List<string> {},
                                                 new List<Fala> {}
@@ -178,7 +178,7 @@ public class Ramos {
                                                     "... o celular dele era um SanZung. Ao encostar no chão, ele explodiu...",
                                                     "... e todo mundo morreu."
                                                 },
-                                                Proximo.Escolha,
+                                                Proximo.NDA,
                                                 new List<int>{},
                                                 new List<string> {},
                                                 new List<Fala>{}
@@ -191,7 +191,7 @@ public class Ramos {
                                                     "... o celular dele era um Nóquia 3310. Ao encostar no chão, o mundo quebrou e a Terra implodiu...",
                                                     "... e todo mundo morreu."
                                                 },
-                                                Proximo.Escolha,
+                                                Proximo.NDA,
                                                 new List<int> {},
                                                 new List<string> {},
                                                 new List<Fala> {}
@@ -217,7 +217,7 @@ public class Ramos {
                                                     "Percebi também que eu tinha salvado ela de ser atropelada por um ônibus!",
                                                     "A pessoa se sentiu muito grata e me deu muito dinheiro para agradecer."
                                                 },
-                                                Proximo.Escolha,
+                                                Proximo.NDA,
                                                 new List<int> {},
                                                 new List<string> {},
                                                 new List<Fala> {}
@@ -230,7 +230,7 @@ public class Ramos {
                                                     "... o celular dele era um SanZung. Ao encostar no chão, ele explodiu...",
                                                     "... e todo mundo morreu."
                                                 },
-                                                Proximo.Escolha,
+                                                Proximo.NDA,
                                                 new List<int>{},
                                                 new List<string> {},
                                                 new List<Fala>{}
@@ -243,7 +243,7 @@ public class Ramos {
                                                     "... o celular dele era um Nóquia 3310. Ao encostar no chão, o mundo quebrou e a Terra implodiu...",
                                                     "... e todo mundo morreu."
                                                 },
-                                                Proximo.Escolha,
+                                                Proximo.NDA,
                                                 new List<int> {},
                                                 new List<string> {},
                                                 new List<Fala> {}
@@ -256,7 +256,7 @@ public class Ramos {
                                                     "Então consegui disfarçar o tropeço com um passo de breakdance!",
                                                     "Ele ficou impressionado com minha habilidade e me deu dinheiro pelo show!"
                                                 },
-                                                Proximo.Escolha,
+                                                Proximo.NDA,
                                                 new List<int> {},
                                                 new List<string> {},
                                                 new List<Fala> {}
@@ -293,7 +293,7 @@ public class Ramos {
                                                 new List<string> {
                                                     "Então fui embora e vendi o celular dele por muito dinheiro!"
                                                 },
-                                                Proximo.Escolha,
+                                                Proximo.NDA,
                                                 new List<int> {},
                                                 new List<string> {},
                                                 new List<Fala>{}
@@ -306,7 +306,7 @@ public class Ramos {
                                                     "... o celular dele era um SanZung. Ao encostar no chão, ele explodiu...",
                                                     "... e todo mundo morreu."
                                                 },
-                                                Proximo.Escolha,
+                                                Proximo.NDA,
                                                 new List<int>{},
                                                 new List<string> {},
                                                 new List<Fala>{}
@@ -331,7 +331,7 @@ public class Ramos {
                                                     "Mas quando eu fui pegar a carteira, ele percebeu!",
                                                     "Depois ele me derrubou, pegou tudo de volta e saiu correndo..."
                                                 },
-                                                Proximo.Escolha,
+                                                Proximo.NDA,
                                                 new List<int>{},
                                                 new List<string> {},
                                                 new List<Fala>{}
@@ -343,7 +343,7 @@ public class Ramos {
                                                     "Mas quando eu peguei a carteira, percebi que era meu amigo de infância!",
                                                     "Tivemos um grande reencontro emotivo! Conversamos muito e ele me deu um emprego!"
                                                 },
-                                                Proximo.Escolha,
+                                                Proximo.NDA,
                                                 new List<int>{},
                                                 new List<string> {},
                                                 new List<Fala>{}
@@ -396,7 +396,7 @@ public class Ramos {
                                                     "Saí correndo para dar uma facada nele, mas...",
                                                     "... ele desviou, faz um corte no meu braço e saiu correndo."
                                                 },
-                                                Proximo.Escolha,
+                                                Proximo.NDA,
                                                 new List<int> {},
                                                 new List<string> {},
                                                 new List<Fala> {}
@@ -408,7 +408,7 @@ public class Ramos {
                                                     "Eu joguei a faca nele, mas ele a agarrou no ar!",
                                                     "Então ele pegou a mochila e saiu andando."
                                                 },
-                                                Proximo.Escolha,
+                                                Proximo.NDA,
                                                 new List<int> {},
                                                 new List<string> {},
                                                 new List<Fala> {}
@@ -421,7 +421,7 @@ public class Ramos {
                                                     "A faca cortou a mochila dele e os pertences caíram, então...",
                                                     "... eu peguei tudo e saí correndo!"
                                                 },
-                                                Proximo.Escolha,
+                                                Proximo.NDA,
                                                 new List<int> {},
                                                 new List<string> {},
                                                 new List<Fala> {}
@@ -446,7 +446,7 @@ public class Ramos {
                                                     "... e veio fazendo uma corrida ninja para cima de mmim!",
                                                     "Eu me defendi e consegui pegar a mochila que ele deixou parada."
                                                 },
-                                                Proximo.Escolha,
+                                                Proximo.NDA,
                                                 new List<int> {},
                                                 new List<string> {},
                                                 new List<Fala> {}
@@ -458,7 +458,7 @@ public class Ramos {
                                                     "Ele jogou a faca em minha direção, mas eu desviei por pouco.",
                                                     "Nesse tempo, a pessoa consegue fugir."
                                                 },
-                                                Proximo.Escolha,
+                                                Proximo.NDA,
                                                 new List<int> {},
                                                 new List<string> {},
                                                 new List<Fala> {}
@@ -482,7 +482,7 @@ public class Ramos {
                                                     "O inimigo gritou NARUTOOOOO e nós lutamos até nos cansarem...",
                                                     "... e ele fogiu sem a bandana."
                                                 },
-                                                Proximo.Escolha,
+                                                Proximo.NDA,
                                                 new List<int> {},
                                                 new List<string> {},
                                                 new List<Fala> {}
@@ -521,7 +521,7 @@ public class Ramos {
                                                 new List<string> {
                                                     "Ele me deu as coisas e eu fuji, como em um assalto normal..."
                                                 },
-                                                Proximo.Escolha,
+                                                Proximo.NDA,
                                                 new List<int> {},
                                                 new List<string> {},
                                                 new List<Fala> {}
@@ -553,7 +553,7 @@ public class Ramos {
                                                                 new List<string> {
                                                                     "Então, ele acertou uma bala de nerf no meu olho e saiu correndo."
                                                                 },
-                                                                Proximo.Escolha,
+                                                                Proximo.NDA,
                                                                 new List<int> {},
                                                                 new List<string> {},
                                                                 new List<Fala> {}
@@ -565,7 +565,7 @@ public class Ramos {
                                                                     "Então, ele me deu outra arma de nerf, nós brincamos e nos divertimos.",
                                                                     "Aí eu me esqueci do assalto."
                                                                 },
-                                                                Proximo.Escolha,
+                                                                Proximo.NDA,
                                                                 new List<int> {},
                                                                 new List<string> {},
                                                                 new List<Fala> {}
@@ -578,7 +578,7 @@ public class Ramos {
                                                         new List<string> {
                                                             "Ele tinha uma nerf, é muito mais perigoso que eu e minha AK-47."
                                                         },
-                                                        Proximo.Escolha,
+                                                        Proximo.NDA,
                                                         new List<int> {},
                                                         new List<string> {},
                                                         new List<Fala> {}
@@ -604,7 +604,7 @@ public class Ramos {
                                                     "Ele aceitou, me agradeceu e nós acabamos nos tornando bem amigos!",
                                                     "Ele até me deu um emprego!"
                                                 },
-                                                Proximo.Escolha,
+                                                Proximo.NDA,
                                                 new List<int> {},
                                                 new List<string> {},
                                                 new List<Fala> {}
@@ -616,7 +616,7 @@ public class Ramos {
                                                     "Mas aí ele me fez de trouxa enquanto eu não prestava atenção...",
                                                     "... ele pegou minha faca e me ameaçou."
                                                 },
-                                                Proximo.Escolha,
+                                                Proximo.NDA,
                                                 new List<int>{},
                                                 new List<string> {},
                                                 new List<Fala>{}
@@ -653,7 +653,7 @@ public class Ramos {
                                                 new List<string> {
                                                     "Eu decidi sair correndo, mas ele saiu atrás, e acabou me assaltando!"
                                                 },
-                                                Proximo.Escolha,
+                                                Proximo.NDA,
                                                 new List<int> {},
                                                 new List<string> {},
                                                 new List<Fala>{}
@@ -665,7 +665,7 @@ public class Ramos {
                                                     "Eu saí correndo, encontrei um policial que me ajudou com a pessoa.",
                                                     "O policial me protegeu e fiquei na internet, ganhando muito dinheiro."
                                                 },
-                                                Proximo.Escolha,
+                                                Proximo.NDA,
                                                 new List<int>{},
                                                 new List<string> {},
                                                 new List<Fala>{}
@@ -689,7 +689,7 @@ public class Ramos {
                                                     "Mas aí o olho do cara começa a brilhar azul...",
                                                     "e eu percebi que eu não iria ter um bom momento naquela hora.!"
                                                 },
-                                                Proximo.Escolha,
+                                                Proximo.NDA,
                                                 new List<int>{},
                                                 new List<string> {},
                                                 new List<Fala>{}
@@ -701,7 +701,7 @@ public class Ramos {
                                                     "Então ele começou a andar na minha direção...",
                                                     "e tivemos uma luta estilo JOJO e eu ganhei!"
                                                 },
-                                                Proximo.Escolha,
+                                                Proximo.NDA,
                                                 new List<int>{},
                                                 new List<string> {},
                                                 new List<Fala>{}
@@ -749,5 +749,6 @@ public enum Status
 public enum Proximo
 {
     Probabilistico,
-    Escolha
+    Escolha,
+    NDA
 }

@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-public class textBox : MonoBehaviour
+public class textBoxArvore : MonoBehaviour
 {
     public Text textDisplay;
     public string[] sentences;
-    private int index;
+    public int index;
     public float typeSpeed;
     public float alpha;
     private SpriteRenderer m_SpriteRenderer;
@@ -16,9 +16,11 @@ public class textBox : MonoBehaviour
     void Start()
     {
         m_SpriteRenderer = GetComponent<SpriteRenderer>();
+        index = 0;
     }
     public void enterDialogue()
     {
+        index = 0;
         StartCoroutine(textTyper());
     }
     IEnumerator textTyper()
@@ -51,5 +53,6 @@ public class textBox : MonoBehaviour
     {
         textDisplay.text = "";
         m_SpriteRenderer.color -= new Color (0, 0, 0, alpha);
+        index++;
     }
 }
