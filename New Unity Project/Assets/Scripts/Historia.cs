@@ -18,8 +18,10 @@ public class Historia : MonoBehaviour
         switch (falaAtual.status)
         {
             case Status.Falha:
+                // Perdeu()
                 break;
             case Status.Sucesso:
+                // Ganhou()
                 break;
             case Status.Nulo:
                 switch (falaAtual.proximo)
@@ -28,7 +30,7 @@ public class Historia : MonoBehaviour
                         // Animacao();
                         break;
                     case Proximo.Probabilistico:
-                        //Animacao();
+                        // Animacao();
                         probabilidade = Random.Range(0, 100);
                         for (int i = 0; i < 5; i++)
                         {
