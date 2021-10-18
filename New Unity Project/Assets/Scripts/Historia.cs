@@ -9,7 +9,7 @@ public class Historia : MonoBehaviour
     public Text[] buttonText;
     public GameObject caixaDeTexto;
     private Ramos arvore;
-    public Fala falaAtual;
+    private Fala falaAtual;
     private int escolha;
     private int probabilidade;
     private bool isAnimating;

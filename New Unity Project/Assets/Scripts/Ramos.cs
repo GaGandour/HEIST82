@@ -733,6 +733,7 @@ public class Fala
         status = status1;
         falas = falas1;
         listaDeOpcoes = listaDeOpcoes1;
+        listadeProbabilidades = listadeProbabilidades1;
         listaDeRamos = listaDeRamos1;
         proximo = proximo1;
     }
