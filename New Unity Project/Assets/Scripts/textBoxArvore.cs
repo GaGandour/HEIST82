@@ -16,12 +16,11 @@ public class textBoxArvore : MonoBehaviour
     void Start()
     {
         m_SpriteRenderer = GetComponent<SpriteRenderer>();
-        index = 0;
     }
     public void enterDialogue()
     {
-        index = 0;
         StartCoroutine(textTyper());
+        index=1;
     }
     IEnumerator textTyper()
      {
@@ -34,11 +33,11 @@ public class textBoxArvore : MonoBehaviour
     }
     public void nextSentence()
     {
-        if(index < sentences.Length - 1)
+        if(index <= sentences.Length - 1)
         {
-            index++;
             textDisplay.text = "";
             StartCoroutine(textTyper());
+            index++;
         }
         else{
             textDisplay.text = "";

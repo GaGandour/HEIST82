@@ -9,7 +9,7 @@ public class Historia : MonoBehaviour
     public Text[] buttonText;
     public GameObject caixaDeTexto;
     private Ramos arvore;
-    private Fala falaAtual;
+    public Fala falaAtual;
     private int escolha;
     private int probabilidade;
     private bool isAnimating;
@@ -19,7 +19,6 @@ public class Historia : MonoBehaviour
         arvore = gameObject.GetComponent<Ramos>() as Ramos;
         falaAtual = arvore.historia;
         caixaDeTexto.GetComponent<textBoxArvore>().sentences = falaAtual.falas.ToArray();
-        
     }
     private void Update() {
         if (Input.GetKeyDown("space") && !caixaDeTexto.GetComponent<textBoxArvore>().isTyping && !isAnimating)
@@ -89,6 +88,7 @@ public class Historia : MonoBehaviour
                 break;
         }
         caixaDeTexto.GetComponent<textBoxArvore>().index = 0;
+        caixaDeTexto.GetComponent<textBoxArvore>().sentences = falaAtual.falas.ToArray();
         escolha = -1;
     }
 
@@ -103,7 +103,7 @@ public class Historia : MonoBehaviour
 
     void enableButtons()
     {
-        for(int j = 0; j <= falaAtual.listaDeOpcoes.ToArray().Length; j++)
+        for(int j = 0; j < falaAtual.listaDeOpcoes.ToArray().Length; j++)
         {
             buttons[j].SetActive(true);
             buttonText[j].text = falaAtual.listaDeOpcoes[j];
@@ -112,13 +112,13 @@ public class Historia : MonoBehaviour
 
     void disableButtons()
     {
-        foreach(GameObject button in buttons)
-        {
-            button.SetActive(false);
-        }
         foreach(Text text in buttonText)
         {
             text.text = "";
+        }
+        foreach(GameObject button in buttons)
+        {
+            button.SetActive(false);
         }
     }
 }
