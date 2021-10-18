@@ -19,6 +19,7 @@ public class textBox : MonoBehaviour
     }
     public void enterDialogue()
     {
+        index = 0;
         StartCoroutine(textTyper());
     }
     IEnumerator textTyper()
