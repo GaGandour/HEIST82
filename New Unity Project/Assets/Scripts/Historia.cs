@@ -10,6 +10,8 @@ public class Historia : MonoBehaviour
     private Fala falaAtual;
     private int escolha;
     private int probabilidade;
+    private bool isAnimating;
+    public Animator bookAnimator;
     private void Start() {
         escolha = -1;
         arvore = gameObject.GetComponent<Ramos>() as Ramos;
@@ -18,7 +20,7 @@ public class Historia : MonoBehaviour
         
     }
     private void Update() {
-        if (Input.GetKeyDown("space") && !caixaDeTexto.GetComponent<textBoxArvore>().isTyping)
+        if (Input.GetKeyDown("space") && !caixaDeTexto.GetComponent<textBoxArvore>().isTyping && !isAnimating)
         {
             Falar();
         }
@@ -62,10 +64,10 @@ public class Historia : MonoBehaviour
                 switch (falaAtual.proximo)
                 {
                     case Proximo.Escolha:
-                        // Animacao();
+                        StartCoroutine(flip());
                         break;
                     case Proximo.Probabilistico:
-                        // Animacao();
+                        StartCoroutine(flip());
                         probabilidade = Random.Range(0, 100);
                         for (int i = 0; i < 5; i++)
                         {
@@ -86,5 +88,14 @@ public class Historia : MonoBehaviour
         }
         caixaDeTexto.GetComponent<textBoxArvore>().index = 0;
         escolha = -1;
+    }
+
+    IEnumerator flip()
+    {
+        isAnimating = true;
+        bookAnimator.SetBool("flip",true);
+        yield return new WaitForSeconds(1f);
+        bookAnimator.SetBool("flip",false);
+        isAnimating = false;
     }
 }
