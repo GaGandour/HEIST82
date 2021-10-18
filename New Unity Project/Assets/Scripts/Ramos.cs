@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Ramos {
+public class Ramos  : MonoBehaviour{
     public Fala historia = new Fala(
         "01",
         Status.Nulo,

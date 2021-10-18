@@ -2,9 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
+using UnityEngine.UI;
 public class Historia : MonoBehaviour
 {
+    public GameObject[] buttons;
+    public Text[] buttonText;
     public GameObject caixaDeTexto;
     private Ramos arvore;
     private Fala falaAtual;
@@ -27,7 +29,7 @@ public class Historia : MonoBehaviour
     }
     public void Escolher (int i) {
         escolha = i;
-        //sumir os botao
+        disableButtons();
         IrParaOProximo();
     }
     public void Falar () {
@@ -40,7 +42,7 @@ public class Historia : MonoBehaviour
             }
             else if (falaAtual.proximo == Proximo.Escolha)
             {
-                // aparecer os botoes
+                enableButtons();
             }
         }
         else if (caixaDeTexto.GetComponent<textBoxArvore>().index == 0) 
@@ -97,5 +99,26 @@ public class Historia : MonoBehaviour
         yield return new WaitForSeconds(1f);
         bookAnimator.SetBool("flip",false);
         isAnimating = false;
+    }
+
+    void enableButtons()
+    {
+        for(int j = 0; j <= falaAtual.listaDeOpcoes.ToArray().Length; j++)
+        {
+            buttons[j].SetActive(true);
+            buttonText[j].text = falaAtual.listaDeOpcoes[j];
+        }
+    }
+
+    void disableButtons()
+    {
+        foreach(GameObject button in buttons)
+        {
+            button.SetActive(false);
+        }
+        foreach(Text text in buttonText)
+        {
+            text.text = "";
+        }
     }
 }
