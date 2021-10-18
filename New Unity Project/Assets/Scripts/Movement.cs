@@ -13,6 +13,7 @@ public class Movement : MonoBehaviour
     public Animator oldManA;
     public Transform oldManT;
     public Animator Room;
+    public textBox chat;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,24 +30,59 @@ public class Movement : MonoBehaviour
         }
         yield return new WaitForSeconds(0.3f);
         //fala com netos
-
-        //falta luz
+        chat.openBox();
+        chat.enterDialogue();
         while (!Input.GetKeyDown(KeyCode.Space))
         {
           yield return null;
         }
+        while (chat.isTyping)
+        {
+          yield return null;
+        }
+        chat.nextSentence();
+        while (chat.isTyping)
+        {
+          yield return null;
+        }
+        while (!Input.GetKeyDown(KeyCode.Space))
+        {
+          yield return null;
+        }
+        chat.nextSentence();
+        while (chat.isTyping)
+        {
+          yield return null;
+        }
+        //pisca a luz
+        while (!Input.GetKeyDown(KeyCode.Space))
+        {
+          yield return null;
+        }
+        chat.closeBox();
         Room.SetBool("flickering",true);
         yield return new WaitForSeconds(0.3f);
         //falas antes de faltar a luz
+        while (!Input.GetKeyDown(KeyCode.Space))
+        {
+          yield return null;
+        }
+        chat.openBox();
+        chat.nextSentence();
+        while (chat.isTyping)
+        {
+          yield return null;
+        }
         //falta luz
         while (!Input.GetKeyDown(KeyCode.Space))
         {
           yield return null;
         }
         Room.SetBool("lightsOut",true);
+        chat.closeBox();
         yield return new WaitForSeconds(0.3f);
         //Vo fala com os netos
-
+        chat.openBox();
         //Vo vai ate estante
         while (!Input.GetKeyDown(KeyCode.Space))
         {
