@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Ramos : MonoBehaviour {
+public class Ramos {
     public Fala historia = new Fala(
         "01",
         Status.Nulo,
@@ -16,11 +16,11 @@ public class Ramos : MonoBehaviour {
             new Fala(
                 "Faca",
                 Status.Nulo,
-                Proximo.Escolha,
                 new List<string> {
                     "... faca! Afinal de contas, todos sabemos que a faca AK-47 é a faca ideal para combates e assaltos!",
                     "Essa faca foi muito útil, pois eu a usei para..."
                 },
+                Proximo.Escolha,
                 new List<int> {},
                 new List<string> {
                     "Cortar a bolsa",
@@ -37,7 +37,7 @@ public class Ramos : MonoBehaviour {
                         new List<int> {33,33,34},
                         new List<string> {},
                         new List<Fala> {
-                            new Fala {
+                            new Fala (
                                 "Celular toca",
                                 Status.Nulo,
                                 new List<string> {
@@ -133,7 +133,7 @@ public class Ramos : MonoBehaviour {
                                         }                
                                     )
                                 }
-                            },
+                            ),
                             new Fala (
                                 "Tropeçar",
                                 Status.Nulo,
@@ -364,7 +364,7 @@ public class Ramos : MonoBehaviour {
                         new List<int> {33,33,34},
                         new List<string> {},
                         new List<Fala> {
-                            new Fala {
+                            new Fala (
                                 "FIGHT",
                                 Status.Nulo,
                                 new List<string> {
@@ -490,7 +490,7 @@ public class Ramos : MonoBehaviour {
                                         }                
                                     )
                                 }
-                            },
+                            ),
                             new Fala (
                                 "medo",
                                 Status.Nulo,
@@ -718,15 +718,15 @@ public class Ramos : MonoBehaviour {
     );
 }
 
-class Fala
+public class Fala
 {
-    string id;
-    Status status;
-    List<string> falas;
-    Proximo proximo;
-    List<int> listadeProbabilidades;
-    List<string> listaDeOpcoes;
-    List<Fala> listaDeRamos;
+    public string id;
+    public Status status;
+    public List<string> falas;
+    public Proximo proximo;
+    public List<int> listadeProbabilidades;
+    public List<string> listaDeOpcoes;
+    public List<Fala> listaDeRamos;
     public Fala(string id1, Status status1, List<string> falas1, Proximo proximo1, List<int> listadeProbabilidades1, List<string> listaDeOpcoes1,List<Fala> listaDeRamos1)
     {
         id = id1;
@@ -736,16 +736,17 @@ class Fala
         listaDeRamos = listaDeRamos1;
         proximo = proximo1;
     }
+    public Fala () {}
 }
 
-enum Status
+public enum Status
 {
     Nulo,
     Sucesso,
     Falha
 }
 
-enum Proximo
+public enum Proximo
 {
     Probabilistico,
     Escolha
