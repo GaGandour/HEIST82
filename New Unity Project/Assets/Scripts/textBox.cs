@@ -8,18 +8,28 @@ public class textBox : MonoBehaviour
     public string[] sentences;
     private int index;
     public float typeSpeed;
+    public float alpha;
+    private SpriteRenderer m_SpriteRenderer;
+
+    public bool isTyping;
+
     void Start()
+    {
+        m_SpriteRenderer = GetComponent<SpriteRenderer>();
+    }
+    public void enterDialogue()
     {
         StartCoroutine(textTyper());
     }
     IEnumerator textTyper()
      {
+        isTyping = true;
         foreach(char letter in sentences[index].ToCharArray()){
             textDisplay.text += letter;
             yield return new WaitForSeconds(typeSpeed);
         }
+        isTyping = false;
     }
-
     public void nextSentence()
     {
         if(index < sentences.Length - 1)
@@ -31,5 +41,15 @@ public class textBox : MonoBehaviour
         else{
             textDisplay.text = "";
         }
+    }
+    public void openBox()
+    {
+        m_SpriteRenderer.color += new Color (0, 0, 0, alpha);
+    }
+
+    public void closeBox()
+    {
+        textDisplay.text = "";
+        m_SpriteRenderer.color -= new Color (0, 0, 0, alpha);
     }
 }
