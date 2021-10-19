@@ -7,8 +7,13 @@ public class Play : MonoBehaviour
 {
     public Animator animator;
     // Start is called before the first frame update
-    public void Comecar () {
+    public void jogar()
+    {
+        StartCoroutine(comecar());
+    }
+    IEnumerator comecar() {
         animator.SetBool("clickedPlay",true);
+        yield return new WaitForSeconds(2f);
         SceneManager.LoadScene("Cena Inicial");
     }
 }
