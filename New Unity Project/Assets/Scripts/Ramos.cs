@@ -10,7 +10,7 @@ public class Ramos  : MonoBehaviour{
         Proximo.Escolha,
         new List<int> {},
         new List<string> {
-            "Faca"
+            "Faca","Garrafa"
         },
         new List<Fala>{
             new Fala(
@@ -709,6 +709,331 @@ public class Ramos  : MonoBehaviour{
                                         }
                                     )
                                 }
+                            )
+                        }
+                    )
+                }
+            ),
+            new Fala (
+                "Garrafa",
+                Status.Nulo,
+                new List <string> {
+                    "... uma garrafa. Afinal, eu não queria levantar suspeitas!",
+                    "Então eu..."
+                },
+                Proximo.Escolha,
+                new List<int> {},
+                new List<string> {
+                    "Quebrar garrafa",
+                    "Fazer Mágica",
+                    "Oferecer bebida"
+                },
+                new List<Fala> {
+                    new Fala (
+                        "Quebrar garrafa",
+                        Status.Nulo,
+                        new List<string> {
+                            "... quebrei a garrafa para fazê-la de arma!"
+                        },
+                        Proximo.Probabilistico,
+                        new List<int> {40,40,20},
+                        new List<string> {},
+                        new List<Fala> {
+                            new Fala (
+                                "outra garrafa",
+                                Status.Nulo,
+                                new List<string> {
+                                    "Acontece que ele também tinha uma garafa quebrada!",
+                                    "Isso me fez sentir ameaçado.",
+                                    "Então eu..."
+                                },
+                                Proximo.Escolha,
+                                new List<int> {},
+                                new List<string> {
+                                    "Ameaçar de volta",
+                                    "Fingir de maluco"
+                                },
+                                new List<Fala> {
+                                    new Fala (
+                                        "Ameaça de volta",
+                                        Status.Nulo,
+                                        new List<string> {
+                                            "... o ameacei de volta!"
+                                        },
+                                        Proximo.Probabilistico,
+                                        new List<int> {50,50},
+                                        new List<string> {},
+                                        new List<Fala> {
+                                            new Fala (
+                                                "Luta de bar",
+                                                Status.Falha,
+                                                new List<string> {
+                                                    "Então nós começamos uma briga de bar com as garrafas...",
+                                                    "Mas eu fui derrotado." 
+                                                },
+                                                Proximo.NDA,
+                                                new List<int>{},
+                                                new List<string>{},
+                                                new List<Fala> {}
+                                            ),
+                                            new Fala (
+                                                "apaziguar",
+                                                Status.Sucesso,
+                                                new List<string> {
+                                                    "Então ele pediu desculpas e disse que não queria brigar...",
+                                                    "... nós brindamos com a garrafa quebrada e viramos amigos...",
+                                                    "... o que mais tarde me permitiu pegar dinheiro emprestado!"
+                                                },
+                                                Proximo.NDA,
+                                                new List<int> {},
+                                                new List<string> {},
+                                                new List<Fala> {}
+                                            )
+                                        }
+                                    ),
+                                    new Fala (
+                                        "Fingir de doido",
+                                        Status.Nulo,
+                                        new List<string> {
+                                            "... fingi de maluco!"
+                                        },
+                                        Proximo.Probabilistico,
+                                        new List<int> {50,50},
+                                        new List<string> {},
+                                        new List<Fala> {
+                                            new Fala (
+                                                "taz",
+                                                Status.Falha,
+                                                new List<string> {
+                                                    "ABLUÉBLUÉBLUÉBLUÉ!" 
+                                                },
+                                                Proximo.NDA,
+                                                new List<int>{},
+                                                new List<string>{},
+                                                new List<Fala> {}
+                                            ),
+                                            new Fala (
+                                                "Ela joga e sai correndo",
+                                                Status.Sucesso,
+                                                new List<string> {
+                                                    "Então ele jogou a garrafa em mim mas eu desviei!",
+                                                    "Como ele ficou sem arma, eu saí correndo atrás dele.",
+                                                    "Ele deixou a bolsa e foi embora!",
+                                                    "Nem preciso dizer que fiquei com a bolsa dele!"
+                                                },
+                                                Proximo.NDA,
+                                                new List<int> {},
+                                                new List<string> {},
+                                                new List<Fala> {}
+                                            )
+                                        }
+                                    )
+                                }
+                            ),
+                            new Fala (
+                                "quebrou errado",
+                                Status.Nulo,
+                                new List<string> {
+                                    "Acontece que, aparentemente, eu não sabia quebrar uma garrafa!",
+                                    "Aí eu me cortei todo..."
+                                },
+                                Proximo.Escolha,
+                                new List<int> {},
+                                new List<string> {
+                                    "Fugir",
+                                    "Pedir ajuda"
+                                },
+                                new List<Fala> {
+                                    new Fala (
+                                        "Fugir",
+                                        Status.Nulo,
+                                        new List<string> {
+                                            "... então eu fugi e chamei uma ambulância!",
+                                        },
+                                        Proximo.Probabilistico,
+                                        new List<int> {50,50},
+                                        new List<string> {},
+                                        new List<Fala> {
+                                            new Fala (
+                                                "Atropelou",
+                                                Status.Falha,
+                                                new List<string> {
+                                                    "Mas ela chegou MUITO rápido...",
+                                                    "... e acabou me atropelando." 
+                                                },
+                                                Proximo.NDA,
+                                                new List<int>{},
+                                                new List<string>{},
+                                                new List<Fala> {}
+                                            ),
+                                            new Fala (
+                                                "conta cara",
+                                                Status.Falha,
+                                                new List<string> {
+                                                    "A ambulância me salvou...",
+                                                    "... mas como eu estava muito machucado,",
+                                                    "A conta ficou muito cara!"
+                                                },
+                                                Proximo.NDA,
+                                                new List<int> {},
+                                                new List<string> {},
+                                                new List<Fala> {}
+                                            )
+                                        }
+                                    ),
+                                    new Fala (
+                                        "Pedir ajuda",
+                                        Status.Nulo,
+                                        new List<string> {
+                                            "... eu pedi ajuda dele."
+                                        },
+                                        Proximo.Probabilistico,
+                                        new List<int> {50,50},
+                                        new List<string> {},
+                                        new List<Fala> {
+                                            new Fala (
+                                                "negado",
+                                                Status.Falha,
+                                                new List<string> {
+                                                    "Ele falou: \"Você tá de brincadeira,né?\"!",
+                                                    "Então ela saiu correndo." 
+                                                },
+                                                Proximo.NDA,
+                                                new List<int>{},
+                                                new List<string>{},
+                                                new List<Fala> {}
+                                            ),
+                                            new Fala (
+                                                "ajuda",
+                                                Status.Sucesso,
+                                                new List<string> {
+                                                    "Ela percebeu que eu me machuquei muito...",
+                                                    "... e me ajudou! Nos tornamos grandes amigos...",
+                                                    "... e ele me deu um emprego"
+                                                },
+                                                Proximo.NDA,
+                                                new List<int> {},
+                                                new List<string> {},
+                                                new List<Fala> {}
+                                            )
+                                        }
+                                    )
+                                }
+                            ),
+                            new Fala (
+                                "F#",
+                                Status.Sucesso,
+                                new List<string> {
+                                    "Eu gritei a nota F#, entrando em ressonância com o vidro da garrafa...",
+                                    "... e ela se quebrou. Ele ficou impressionado e me deu muito dinheiro!"
+                                },
+                                Proximo.NDA,
+                                new List<int> {},
+                                new List<string> {},
+                                new List<Fala> {}
+                            )
+                        }
+                    ),
+                    new Fala (
+                        "magica",
+                        Status.Nulo,
+                        new List<string> {
+                            "... fiz um truque de mágica com a garrafa!"
+                        },
+                        Proximo.Probabilistico,
+                        new List<int> {30,50,20},
+                        new List<string> {},
+                        new List<Fala> {
+                            new Fala (
+                                "nao gostou",
+                                Status.Falha,
+                                new List<string> {
+                                    "Mas ele não gostou do truque...",
+                                    "... e simplesmente foi embora...",
+                                    "... deixando um vazio no meu coração."
+                                },
+                                Proximo.NDA,
+                                new List<int> {},
+                                new List<string> {},
+                                new List<Fala> {}
+                            ),
+                            new Fala (
+                                "gostou",
+                                Status.Sucesso,
+                                new List<string> {
+                                    "Eu fiz a garrafa desaparecer...",
+                                    "... e disse que estava na bolsa dele!",
+                                    "Rapidamente aproveitei a oportunidade, peguei a bolsa...",
+                                    "... e fui embora!!!"
+                                },
+                                Proximo.NDA,
+                                new List<int> {},
+                                new List<string> {},
+                                new List<Fala> {}
+                            ),
+                            new Fala (
+                                "magica errada",
+                                Status.Falha,
+                                new List<string> {
+                                    "Mas a mágica saiu um pouco errado...",
+                                    "... e quem desapareceu foi o cara...",
+                                    "... que desapareceu junto com a bolsa."
+                                },
+                                Proximo.NDA,
+                                new List<int> {},
+                                new List<string> {},
+                                new List<Fala> {}
+                            )
+                        }
+                    ),
+                    new Fala (
+                        "Oferecer bebida",
+                        Status.Nulo,
+                        new List<string> {
+                            "... ofereci um pouco de bebida a ele!"
+                        },
+                        Proximo.Probabilistico,
+                        new List<int> {30,30,40},
+                        new List<string> {},
+                        new List<Fala> {
+                            new Fala (
+                                "aceitou",
+                                Status.Falha,
+                                new List<string> {
+                                    "Ele aceitou a bebida, nós bebemos...",
+                                    "... nos divertimos, e dias depois...",
+                                    "... nos casamos em Las Vegas...",
+                                    "... o que gastou MUITO dinheiro!!!"
+                                },
+                                Proximo.NDA,
+                                new List<int> {},
+                                new List<string> {},
+                                new List<Fala> {}
+                            ),
+                            new Fala (
+                                "bebado necessitado",
+                                Status.Sucesso,
+                                new List<string> {
+                                    "Ele achou que eu era um bêbado necessitado...",
+                                    "... e me deu uma boa grana!"
+                                },
+                                Proximo.NDA,
+                                new List<int> {},
+                                new List<string> {},
+                                new List<Fala> {}
+                            ),
+                            new Fala (
+                                "alcool gel",
+                                Status.Falha,
+                                new List<string> {
+                                    "Mas a bebida alcoólica era álcool em gel...",
+                                    "Ele higienizou a sua mão e fio embora...",
+                                    "... junto com a bolsa."
+                                },
+                                Proximo.NDA,
+                                new List<int> {},
+                                new List<string> {},
+                                new List<Fala> {}
                             )
                         }
                     )
