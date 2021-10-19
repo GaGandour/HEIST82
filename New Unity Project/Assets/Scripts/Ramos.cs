@@ -695,7 +695,7 @@ public class Ramos  : MonoBehaviour{
                                                 new List<Fala>{}
                                             ),
                                             new Fala (
-                                                "Amigo de infância",
+                                                "jojo",
                                                 Status.Sucesso,
                                                 new List<string> {
                                                     "Então ele começou a andar na minha direção...",
@@ -896,7 +896,7 @@ public class Ramos  : MonoBehaviour{
                                                 Status.Falha,
                                                 new List<string> {
                                                     "Ele falou: \"Você tá de brincadeira,né?\"!",
-                                                    "Então ela saiu correndo." 
+                                                    "Então ele saiu correndo." 
                                                 },
                                                 Proximo.NDA,
                                                 new List<int>{},
