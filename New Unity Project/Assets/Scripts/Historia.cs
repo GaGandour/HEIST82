@@ -56,10 +56,10 @@ public class Historia : MonoBehaviour
         switch (falaAtual.status)
         {
             case Status.Falha:
-                // Perdeu()
+                SceneManager.LoadScene("Derrota");
                 break;
             case Status.Sucesso:
-                // Ganhou()
+                SceneManager.LoadScene("Vitoria");
                 break;
             case Status.Nulo:
                 switch (falaAtual.proximo)
