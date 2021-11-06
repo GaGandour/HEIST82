@@ -1,2 +1,2 @@
 # HEIST82
-Terceira tentativa
+This is the game submited to the internal annual gamedev competition from ITABits. 
